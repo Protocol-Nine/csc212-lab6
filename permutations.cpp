@@ -36,11 +36,11 @@ void permutations(std::vector<int> &a, int current_permutation) {
         // for odd permutations
             //swap first and last free element
         if (current_permutation % 2 == 1) {
-            std::swap(a[0], a[current_permutation - 1]);
+            std::swap(a[a.size() - 1], a[a.size() - current_permutation]);
         } else {
         // for odd permutations
             // swap i and last free elements
-            std::swap(a[i], a[current_permutation - 1]);
+            std::swap(a[a.size() - 1 - i], a[a.size() - current_permutation]);
         }
     }
 }
