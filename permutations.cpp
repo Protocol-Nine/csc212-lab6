@@ -40,7 +40,7 @@ void permutations(std::vector<int> &a, int current_permutation) {
         } else {
         // for even permutations
             // swap i before last and last elements
-            std::swap(a[a.size() - 1], a[a.size() - current_permutation]);
+            std::swap(a[a.size() - i - 1], a[a.size() - current_permutation]);
         }
     }
 }
