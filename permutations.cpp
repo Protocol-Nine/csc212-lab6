@@ -34,13 +34,13 @@ void permutations(std::vector<int> &a, int current_permutation) {
         permutations(a, current_permutation - 1);
 
         // for odd permutations
-            //swap first and last free element
+            //swap first and last element
         if (current_permutation % 2 == 1) {
             std::swap(a[a.size() - 1], a[a.size() - current_permutation]);
         } else {
-        // for odd permutations
-            // swap i and last free elements
-            std::swap(a[a.size() - 1 - i], a[a.size() - current_permutation]);
+        // for even permutations
+            // swap i before last and last elements
+            std::swap(a[a.size() - 1], a[a.size() - current_permutation]);
         }
     }
 }
